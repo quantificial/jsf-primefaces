@@ -6,7 +6,7 @@
   xmlns:sec="http://www.springframework.org/security/tags">
 
 <h:head>
-  <title>PrimeFaces Hello World Example</title>
+  <title>Greeting</title>
   <h:outputStylesheet name="/css/main.css" />
 </h:head>
 
@@ -22,7 +22,7 @@
   </div>
 
   <h:form>
-    <p:panel header="PrimeFaces Hello World Example">
+    <p:panel header="Greeting">
       <h:panelGrid columns="2" cellpadding="4">
 
         <h:outputText value="First Name: " />
@@ -33,8 +33,6 @@
 
         <p:commandButton value="Submit" update="greeting"
           oncomplete="PF('greetingDialog').show()" />
-          
-        <p:commandButton value="Greeting" action="greeting" />
       </h:panelGrid>
     </p:panel>
 
