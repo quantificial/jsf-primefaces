@@ -1,6 +1,8 @@
 package com.codenotfound;
 
 
+import java.util.Locale;
+
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 
@@ -13,6 +15,7 @@ public class TestController {
 	}
 	
 	public String processPage2(){
+		
 		return "success";
 	}
 	

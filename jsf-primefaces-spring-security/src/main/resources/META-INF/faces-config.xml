@@ -1,22 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <faces-config xmlns="http://xmlns.jcp.org/xml/ns/javaee"
-			  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-			  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
                                   http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
-			  version="2.2">
-			  
-    <navigation-rule>
-	<from-view-id>helloworld.xhtml</from-view-id>
-	<navigation-case>
-		<from-action>#{testController.processPage1}</from-action>
-		<from-outcome>success</from-outcome>
-		<to-view-id>page1.xhtml</to-view-id>
-	</navigation-case>
-	<navigation-case>
-		<from-action>#{testController.processPage2}</from-action>
-		<from-outcome>success</from-outcome>
-		<to-view-id>page2.xhtml</to-view-id>
-	</navigation-case>
-    </navigation-rule>	
+	version="2.2">
+
+	<navigation-rule>
+		<from-view-id>helloworld.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{testController.processPage1}</from-action>
+			<from-outcome>success</from-outcome>
+			<to-view-id>page1.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{testController.processPage2}</from-action>
+			<from-outcome>success</from-outcome>
+			<to-view-id>page2.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<application>
+		<locale-config>
+			<default-locale>en</default-locale>
+		</locale-config>
+		<resource-bundle>
+			<base-name>welcome</base-name>
+			<var>msg</var>
+		</resource-bundle>
+	</application>
 
 </faces-config>
