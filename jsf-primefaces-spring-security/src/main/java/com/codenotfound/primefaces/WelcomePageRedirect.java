@@ -15,4 +15,5 @@ public class WelcomePageRedirect implements WebMvcConfigurer {
         .setViewName("forward:/helloworld.xhtml");
     registry.setOrder(Ordered.HIGHEST_PRECEDENCE);
   }
+  
 }

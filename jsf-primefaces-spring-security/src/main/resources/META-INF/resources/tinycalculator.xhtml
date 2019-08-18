@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:sec="http://www.springframework.org/security/tags">
+
+<h:head>
+	<title>tiny calculator</title>
+	<h:outputStylesheet name="/css/main.css" />
+</h:head>
+
+<h:body>
+
+	<h:form>
+	
+		<p:inputText value="#{tinyCalculator.param1}">
+			<p:ajax event="keyup" listener="#{tinyCalculator.addListener()}" update="result" />
+		</p:inputText>
+
+		<p:inputText value="#{tinyCalculator.param2}" />
+
+		<p:inputText id="result" value="#{tinyCalculator.result}" />
+
+		<div>
+			<h:commandButton value="add.." action="#{tinyCalculator.add()}" ></h:commandButton>
+		</div>
+		
+		
+		<div>
+			<p:inputText id="in" value="#{tinyCalculator.hiddenMessage}">
+				<p:ajax event="keyup" update="out" />  
+			</p:inputText>  
+		</div>
+		
+		<div>
+			<h:outputText id="out" value="#{tinyCalculator.hiddenMessage}" />  
+		</div>
+	
+	</h:form>
+
+</h:body>
+</html>

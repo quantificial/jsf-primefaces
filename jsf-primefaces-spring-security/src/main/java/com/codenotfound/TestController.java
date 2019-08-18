@@ -6,6 +6,11 @@ import java.util.Locale;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 
+/**
+ * redirect from two controller
+ * @author foosi
+ *
+ */
 @SessionScoped
 @Named
 public class TestController {
