@@ -26,14 +26,15 @@
 		  This is a primary alert—check it out!
 		</div>
 		
-		<i class="fa fa-twitter">this is testing</i>
-		<i class="fa fa-apple-alt">apple</i>
-		<i class="fas fa-atom">atom</i>
-
-		<p:commandButton icon="pi pi-times" class="fa fa-arrow-up fa-1x"></p:commandButton>
-		
-		<p:outputLabel class="fa fa-hand-stop-o"></p:outputLabel>
-
+		<div>
+			<i class="fa fa-twitter fa-2x"> this is testing</i>
+			<i class="fa fa-apple-alt"> apple</i>
+			<i class="fas fa-atom"> atom</i>
+	
+			<p:commandButton icon="pi pi-times" class="fa fa-arrow-up fa-1x"></p:commandButton>
+			
+			<p:outputLabel class="fa fa-hand-stop-o"></p:outputLabel>
+		</div>
 
 		<p:inputText value="#{tinyCalculator.param1}">
 			<p:ajax event="keyup" listener="#{tinyCalculator.addListener()}" 
