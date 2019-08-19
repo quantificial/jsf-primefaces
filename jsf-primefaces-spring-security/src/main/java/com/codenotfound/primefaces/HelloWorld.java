@@ -30,6 +30,7 @@ public class HelloWorld {
   }
 
   public String showGreeting() {
+	  
     Authentication authentication =
         SecurityContextHolder.getContext().getAuthentication();
     

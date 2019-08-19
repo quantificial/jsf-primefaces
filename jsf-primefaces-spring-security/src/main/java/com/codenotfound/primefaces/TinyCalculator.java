@@ -11,6 +11,8 @@ import lombok.Data;
 @Data
 public class TinyCalculator {
 	
+	private String componentSuite = "RichFaces";
+	
 	private double param1;
 	private double param2;
 	
