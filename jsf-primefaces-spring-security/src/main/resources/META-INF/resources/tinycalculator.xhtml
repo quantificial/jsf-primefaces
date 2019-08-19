@@ -13,16 +13,13 @@
 
 <h:body>
 
-	<h:form>
-
+	<h:form id="mainForm">
 
 		<p:commandButton icon="pi pi-times"></p:commandButton>
-		<i class="pi pi-check"></i>
-		<i class="pi pi-times"></i>
 
 
 		<p:inputText value="#{tinyCalculator.param1}">
-			<p:ajax event="keyup" listener="#{tinyCalculator.addListener()}"
+			<p:ajax event="keyup" listener="#{tinyCalculator.addListener()}" 
 				update="result" />
 		</p:inputText>
 
@@ -37,12 +34,12 @@
 
 		<div>
 			<p:inputText id="in" value="#{tinyCalculator.hiddenMessage}">
-				<p:ajax event="keyup" update="out" />
+				<p:ajax event="keyup" update="out" disabled="true"/>
 			</p:inputText>
 		</div>
 
 		<div>
-			<h:outputText id="out" value="#{tinyCalculator.hiddenMessage}" />
+			<p:outputLabel id="out" value="#{tinyCalculator.hiddenMessage}" />
 		</div>
 
 		<div>
@@ -55,6 +52,8 @@
 				</p:selectOneRadio>
 			</h:panelGrid>
 		</div>
+		
+		<p:commandButton value="Submit" update="out" icon="ui-icon-check" />  
 
 	</h:form>
 
