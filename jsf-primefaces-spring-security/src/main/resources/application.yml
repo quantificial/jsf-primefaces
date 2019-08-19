@@ -1,3 +1,4 @@
 joinfaces:
   primefaces:
     theme: bootstrap
+    font-awesome: true

@@ -8,7 +8,14 @@
 
 <h:head>
 	<title>tiny calculator</title>
-	<h:outputStylesheet name="/css/main.css" />
+	
+	<h:outputStylesheet name="/css/main.css" />	
+	
+	<link rel="stylesheet" href="/webjars/font-awesome/css/all.min-jsf.css"/>
+	<link rel="stylesheet" href="/webjars/font-awesome/css/v4-shims.min-jsf.css"/>
+	
+	<h:outputStylesheet library="webjars" name="font-awesome/5.10.1/css/all.min-jsf.css" />
+	<h:outputStylesheet library="webjars" name="font-awesome/5.10.1/css/v4-shims.min-jsf.css" />
 </h:head>
 
 <h:body>
@@ -18,8 +25,14 @@
 		<div class="alert alert-primary" role="alert">
 		  This is a primary alert—check it out!
 		</div>
+		
+		<i class="fa fa-twitter">this is testing</i>
+		<i class="fa fa-apple-alt">apple</i>
+		<i class="fas fa-atom">atom</i>
 
-		<p:commandButton icon="pi pi-times"></p:commandButton>
+		<p:commandButton icon="pi pi-times" class="fa fa-arrow-up fa-1x"></p:commandButton>
+		
+		<p:outputLabel class="fa fa-hand-stop-o"></p:outputLabel>
 
 
 		<p:inputText value="#{tinyCalculator.param1}">
