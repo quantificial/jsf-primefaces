@@ -45,6 +45,11 @@
 			<artifactId>primefaces-spring-boot-starter</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>org.joinfaces</groupId>
+			<artifactId>butterfaces-spring-boot-starter</artifactId>
+		</dependency>
+
+		<dependency>
 			<groupId>javax.enterprise</groupId>
 			<artifactId>cdi-api</artifactId>
 		</dependency>
