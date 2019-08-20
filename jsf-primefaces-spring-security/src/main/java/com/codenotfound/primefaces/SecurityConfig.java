@@ -12,10 +12,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
   @Override
   protected void configure(HttpSecurity http) throws Exception {
     // require all requests to be authenticated except for the resources
-    http.authorizeRequests().antMatchers("/javax.faces.resource/**")
+    http.authorizeRequests().antMatchers("/javax.faces.resource/**","/set","/me")
         .permitAll()
-        //.anyRequest().authenticated();
-        .anyRequest().permitAll();
+        .anyRequest().authenticated();
+        //.anyRequest().permitAll();
     // login
     http.formLogin().loginPage("/login.xhtml").permitAll()
         .failureUrl("/login.xhtml?error=true");

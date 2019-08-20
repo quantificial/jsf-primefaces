@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui" 
+	xmlns:sec="http://www.springframework.org/security/tags">
+
+<h:head>
+	<title>butterfaces demo</title>
+	<h:outputStylesheet library="webjars" name="font-awesome/5.10.1/css/all.min-jsf.css" />
+	<h:outputStylesheet library="webjars" name="font-awesome/5.10.1/css/v4-shims.min-jsf.css" />
+</h:head>
+
+<h:body>
+  
+<i class="fa fa-apple-alt"> apple</i>
+
+<p:commandButton  value="Capture" icon="fa fa-camera-retro"/>
+
+<p:commandButton value="Edit" icon="fa fa-edit" type="button"/>
+
+<h:form >
+    <p:panel id="panel" header="Form" style="margin-bottom:10px;">
+        <p:messages id="messages" />
+        <h:panelGrid columns="2" cellpadding="5">
+            <p:outputLabel for="name" value="Standard Label:" />
+            <p:inputText id="name" required="true" requiredMessage="#{dummyModel.msg()}" />
+ 
+            <p:outputLabel for="extended" value="Extended Label:" />
+            <p:inputText id="extended" required="true" />
+ 
+            <p:outputLabel for="@next" value="Number:" />
+            <p:spinner id="number" value="0"/>
+
+        </h:panelGrid>
+    </p:panel>
+ 
+    <p:commandButton value="Submit" update="panel"  />
+    
+	<h:panelGrid columns="3">
+	<h:outputLabel for="cname">Car Name:</h:outputLabel>
+	<h:inputText id="cname" value="#{dummyModel.dummy1}"></h:inputText>
+	<br /><br />
+	<h:outputLabel for="color">Car Color:</h:outputLabel>
+	<h:inputText id="color" value="#{dummyModel.dummy2}"></h:inputText>
+	</h:panelGrid>
+	
+	<h:graphicImage value="/images/fff.png" width="200" rendered="false"/>
+	<h:commandButton id="submit" action="#{dummyModel.nav()}" value="Submit" />
+	
+	<f:loadBundle basename="resourcebundle" var="res" />
+	<h:outputLabel value="#{res.name}" />
+	
+</h:form>
+
+</h:body>
+</html>
