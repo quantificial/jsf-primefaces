@@ -10,3 +10,25 @@
 .main-form {
   margin-top: 50px;
 }
+
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
+
+.ui-widget, .ui-widget .ui-widget {
+    font-size: 100%;
+    font-family: 'Oswald', sans-serif !important;
+}
+
+.new {
+	font-family: 'Oswald', sans-serif !important;
+	font-size: 150%;
+}
+
+body {
+	/**
+	background-color: yellow;
+	*/
+	/*
+	font-family: 'Oswald', sans-serif !important;	
+	*/
+}
+	
