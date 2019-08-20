@@ -2,6 +2,7 @@ package com.codenotfound;
 
 import java.security.Principal;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -45,7 +46,14 @@ public class TestDummyAuth {
 		
 		//logger.debug("Logging in with [{}]", authentication.getPrincipal());
 		
+		
 		return principal;
+	}
+	
+	@RequestMapping("/addrole")
+	public void addrole() {
+		GrantedAuthority e = (GrantedAuthority)(new SimpleGrantedAuthority("ROLE_ABC"));
+		
 	}
 	
 	@RequestMapping("/me")

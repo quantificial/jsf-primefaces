@@ -38,6 +38,8 @@ public class DummyLoginFilter implements Filter {
 		authorities.add(new SimpleGrantedAuthority("ROLE_TRY"));
 		
 		UserDetails user = new User("abc", "123", authorities);
+		
+		
 			
 		Authentication authentication = new UsernamePasswordAuthenticationToken(user, "123", authorities);
 		//authentication.setAuthenticated(true);
