@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:sec="http://www.springframework.org/security/tags">
+<h:body>
+	<h:head>
+		<style type="text/css">
+.authorTable {
+	border-collapse: collapse;
+	border-bottom: 1px solid #000000;
+}
+
+.authorTableHeader {
+	text-align: center;
+	background: none repeat scroll 0 0 #B5B5B5;
+	border-bottom: 1px solid #000000;
+	border-top: 1px solid #000000;
+	padding: 2px;
+}
+
+.authorTableOddRow {
+	text-align: center;
+	background: none repeat scroll 0 0 #FFFFFFF;
+}
+
+.authorTableEvenRow {
+	text-align: center;
+	background: none repeat scroll 0 0 #D3D3D3;
+}
+</style>
+	</h:head>
+	<ui:composition template="templates/common.xhtml">
+		<ui:define name="content">
+
+
+			<h:link value="Page 1" outcome="page1" />
+         &nbsp;
+         <h:link value="Page 2" outcome="page2" />
+
+
+			<h:outputText value="12-01-2012">
+				<f:convertDateTime pattern="dd-mm-yyyy" />
+			</h:outputText>
+
+			<p />
+
+			<h:form>
+				<h:inputText id="nameInput" value="#{dummyModel.dummy1}"
+					label="name">
+					<f:validateLength minimum="5" maximum="8" />
+				</h:inputText>
+
+				<h:message for="nameInput" style="color:red" />
+				<h:commandButton value="submit" action="result" />
+			</h:form>
+
+			<h:dataTable value="#{dummyModel.dummyData}" var="c"
+				styleClass="authorTable" headerClass="authorTableHeader"
+				rowClasses="authorTableOddRow,authorTableEvenRow">
+
+				<h:column>
+					<f:facet name="header">ID</f:facet>
+            		#{c.id}
+         		</h:column>
+
+				<h:column>
+					<f:facet name="header">Name</f:facet>
+            		#{c.name}
+         		</h:column>
+			</h:dataTable>
+
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

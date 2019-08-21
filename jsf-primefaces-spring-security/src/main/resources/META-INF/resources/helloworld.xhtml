@@ -8,23 +8,33 @@
 <h:head>
 	<title>PrimeFaces Hello World Example</title>
 	<h:outputStylesheet name="/css/main.css" />
+	
+	<style>
+	.whiteIcon .ui-icon {
+	 background-image: url("../javax.faces.resource/images/ui-icons_ffffff_256x240.png.jsf?ln=primefaces-aristo");
+}
+	</style>
 </h:head>
 
 <h:body>
 
 	<div class="authorization-div">
 		<sec:authorize access="hasRole('ROLE_USER')">
-			<p:outputLabel value="You have the USER role" />
+			<p:outputLabel value="You have the USER role" /><p/>
 		</sec:authorize>
 		<sec:authorize access="hasRole('ROLE_ADMIN')">
-			<p:outputLabel value="You have the ADMIN role" />
+			<p:outputLabel value="You have the ADMIN role" /><p/>
 		</sec:authorize>
 		<sec:authorize access="hasRole('ROLE_TRY')">
-			<p:outputLabel value="You have the TRY role" />
+			<p:outputLabel value="You have the TRY role" /><p/>
 		</sec:authorize>
 	</div>
 
 	<h:form>
+	
+	<p:growl id="growl" for="msg" showDetail="true" sticky="true" />
+	<p:commandButton icon="ui-icon-print" value="Ajax Submit" id="ajax" update="growl" action="#{tinyCalculator.showMessage}" style="margin-right:20px;" styleClass="whiteIcon ui-priority-primary pull-right" />
+	
 	<div class="main-form">
 	<h2>
 		<h:outputText value="#{msg['welcome.jsf']}" />
@@ -44,8 +54,8 @@
 
 				<p:commandButton value="Greeting" action="greeting" />
 				
-    			<h:commandButton action="#{testController.processPage1}" value="Page1" />
-    			<h:commandButton action="#{testController.processPage2}" value="Page2" />
+    			<p:commandButton action="#{testController.processPage1}" value="Page1" />
+    			<p:commandButton action="#{testController.processPage2}" value="Page2" />
     			
 			</h:panelGrid>
 		</p:panel>

@@ -27,6 +27,9 @@
 			<base-name>welcome</base-name>
 			<var>msg</var>
 		</resource-bundle>
+		<message-bundle>
+			MyMessage
+		</message-bundle>
 	</application>
 
 </faces-config>

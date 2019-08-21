@@ -1,0 +1,60 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+	<h:head>
+<style>
+@import url(http://fonts.googleapis.com/css?family=Judson:400,700);
+@import url(http://fonts.googleapis.com/css?family=Kameron:400,700);
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+.ui-widget, .ui-widget .ui-widget {
+font-size: 100% !important;
+}
+
+body,
+input,
+select,
+textarea,
+button,
+.ui-widget,
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button,
+.ui-widget-header,
+.ui-widget-content,
+.ui-widget-header .ui-widget-header,
+.ui-widget-content .ui-widget-content {
+font-family: Kameron,'Noto Sans TC', Arial, Verdana, sans-serif;
+font-size: 16px;
+}
+
+</style>	
+	</h:head>
+	<h:body>
+		<h:form>
+			<p:spinner />
+		</h:form>
+		
+		<h:form id="form1">
+		
+			<p:commandButton update=":form2:display2" action="#{dummyModel.add()}" value="Update"/> <p />
+			
+			<p:inputText id="param1" value="#{dummyModel.param1}" /> <p />
+			<p:inputText id="param2" value="#{dummyModel.param2}" /> <p />
+			
+			<h:outputText id="display3" value="#{dummyModel.result}"/> 
+			
+		</h:form>
+		
+		<h:form id="form2">
+		
+			<h:outputText id="display2" value="#{dummyModel.result}"/>
+		
+		</h:form>
+				
+	</h:body>
+
+</html>
