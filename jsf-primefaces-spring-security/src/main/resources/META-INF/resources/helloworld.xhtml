@@ -7,12 +7,12 @@
 
 <h:head>
 	<title>PrimeFaces Hello World Example</title>
-	<h:outputStylesheet name="/css/main.css" />
-	
+	<h:outputStylesheet name="css/main.css" />	
+			
 	<style>
 	.whiteIcon .ui-icon {
 	 background-image: url("../javax.faces.resource/images/ui-icons_ffffff_256x240.png.jsf?ln=primefaces-aristo");
-}
+	}
 	</style>
 </h:head>
 
@@ -34,6 +34,9 @@
 	
 	<p:growl id="growl" for="msg" showDetail="true" sticky="true" />
 	<p:commandButton icon="ui-icon-print" value="Ajax Submit" id="ajax" update="growl" action="#{tinyCalculator.showMessage}" style="margin-right:20px;" styleClass="whiteIcon ui-priority-primary pull-right" />
+	
+	<p:commandButton type="button" value="fa fa-folder-open" icon="fa fa-folder-open" />
+	<p:commandButton type="button" value="ui-icon-document" icon="ui-icon-document" />
 	
 	<div class="main-form">
 	<h2>

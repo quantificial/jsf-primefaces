@@ -2,3 +2,4 @@ joinfaces:
   primefaces:
     theme: bootstrap
     font-awesome: true
+server:  port: 8081
