@@ -19,11 +19,11 @@
 
 .ui-widget, .ui-widget .ui-widget {
     font-size: 100%;
-    font-family: 'xRoboto Condensed','Noto+Sans+TC', sans-serif !important;
+    font-family: 'Roboto Condensed','Noto+Sans+TC', sans-serif !important;
 }
 
 .new {
-	font-family: 'xRoboto Condensed','Noto+Sans+TC', sans-serif !important;
+	font-family: 'Roboto Condensed','Noto+Sans+TC', sans-serif !important;
 	font-size: 150%;
 }
 
@@ -36,4 +36,3 @@ body {
 	
 	
 }
-	
