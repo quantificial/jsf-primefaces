@@ -37,7 +37,7 @@ public class DummyLoginFilter implements Filter {
 		authorities.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
 		authorities.add(new SimpleGrantedAuthority("ROLE_TRY"));
 		
-		UserDetails user = new User("abc", "123", authorities);
+		UserDetails user = new User("dummy_user", "123", authorities);
 		
 		
 			

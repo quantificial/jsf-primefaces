@@ -1,4 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,300,700');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
 
 .authorization-div {
@@ -18,11 +19,11 @@
 
 .ui-widget, .ui-widget .ui-widget {
     font-size: 100%;
-    font-family: 'Roboto Condensed', sans-serif !important;
+    font-family: 'xRoboto Condensed','Noto+Sans+TC', sans-serif !important;
 }
 
 .new {
-	font-family: 'Roboto Condensed', sans-serif !important;
+	font-family: 'xRoboto Condensed','Noto+Sans+TC', sans-serif !important;
 	font-size: 150%;
 }
 
@@ -31,7 +32,7 @@ body {
 	/*background-color: yellow;*/
 	
 	
-	font-family: 'Roboto Condensed', sans-serif !important;	
+	font-family: 'Roboto Condensed','Noto+Sans+TC', sans-serif !important;	
 	
 	
 }

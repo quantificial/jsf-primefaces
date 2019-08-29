@@ -6,7 +6,10 @@
 	xmlns:sec="http://www.springframework.org/security/tags">
 
 <h:head>
-	<title>PrimeFaces Hello World Example</title>
+	<title>JSF Demo</title>
+
+	
+	
 	<h:outputStylesheet name="css/main.css" />	
 			
 	<style>
@@ -33,17 +36,28 @@
 	<h:form>
 	
 	<p:growl id="growl" for="msg" showDetail="true" sticky="true" />
-	<p:commandButton icon="ui-icon-print" value="Ajax Submit" id="ajax" update="growl" action="#{tinyCalculator.showMessage}" style="margin-right:20px;" styleClass="whiteIcon ui-priority-primary pull-right" />
+	<p:commandButton icon="ui-icon-print" value="Ajax Submit" id="ajax" update="growl" action="#{tinyCalculator.showMessage}" style="margin-right:20px;" styleClass="whiteIcon ui-priority-primary pull-left" />
 	
 	<p:commandButton type="button" value="fa fa-folder-open" icon="fa fa-folder-open" />
+	
 	<p:commandButton type="button" value="ui-icon-document" icon="ui-icon-document" />
 	
 	<div class="main-form">
 	<h2>
 		<h:outputText value="#{msg['welcome.jsf']}" />
 	</h2>
+	<h3>
+		<h:outputText value="#{helloWorld.sessionId()}"></h:outputText>
+	</h3>
+	<h4>
+		
+		<p:inputText id="sessionValueInput" value="#{helloWorld.value}" />
+		<p:commandButton icon="ui-icon-print" value="Ajax Session" id="ajaxSession" update="sessionValueText" action="#{helloWorld.assignSession()}" style="margin-right:20px;" styleClass="whiteIcon ui-priority-primary pull-left" />
+		<h:outputText id="sessionValueText" value="#{helloWorld.sessionValue()}" />			
+	</h4>
+	
 	</div>
-		<p:panel header="PrimeFaces Hello World Example" >
+		<p:panel header="Simple Widgets Demo" >
 			<h:panelGrid columns="2" cellpadding="4">
 
 				<h:outputText value="First Name: " />
