@@ -32,6 +32,15 @@ public class HazelcastHttpSessionConfig {
 				.addMapIndexConfig(new MapIndexConfig(
 						HazelcastSessionRepository.PRINCIPAL_NAME_ATTRIBUTE, false));
 		
+		// set port
+		//config.getNetworkConfig().setPort(5900);
+		
+		
+		
+		// set bind to the interface
+		config.getNetworkConfig().getInterfaces().setEnabled(true).addInterface("127.0.0.1");
+		
+		// create seperated cluster based on group name
 		config.getGroupConfig().setName("jsf");
 
 		return Hazelcast.newHazelcastInstance(config); 
